@@ -1,4 +1,4 @@
-import { Box, HStack, ListItem, Text, VStack } from "@chakra-ui/react";
+import { Box, HStack, ListItem, Text } from "@chakra-ui/react";
 import { FC } from "react";
 
 type userProps = {
@@ -16,7 +16,7 @@ const User: FC<userProps> = ({ name, age, email }) => {
 						{name}
 					</Text>
 					<Text fontSize="xl" fontWeight="medium">
-						{age}
+						{age}歳
 					</Text>
 					<Text fontSize="xl" fontWeight="medium">
 						{email}
