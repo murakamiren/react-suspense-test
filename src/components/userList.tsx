@@ -20,7 +20,7 @@ const UserList: FC = () => {
 		}
 	};
 
-	const { data: userData, error } = useSWR<userType[]>(`${import.meta.env.VITE_DATA_URL}/user/${1}`, fetcher, {
+	const { data: userData } = useSWR<userType[]>(`${import.meta.env.VITE_DATA_URL}/user/${searchWord}`, fetcher, {
 		suspense: true,
 	});
 
