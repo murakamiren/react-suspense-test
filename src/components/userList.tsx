@@ -1,4 +1,4 @@
-import { Spinner, UnorderedList, VStack } from "@chakra-ui/react";
+import { Heading, Spinner, UnorderedList, VStack } from "@chakra-ui/react";
 import { FC, Suspense } from "react";
 import useSWR from "swr";
 import { userType } from "../types/userType";
@@ -10,6 +10,7 @@ const UserList: FC = () => {
 
 	return (
 		<UnorderedList>
+			<Heading as="h2">user list</Heading>
 			<VStack spacing={4} />
 			{data?.map((user) => (
 				<User key={user.id} name={user.name} age={user.age} email={user.email} />
