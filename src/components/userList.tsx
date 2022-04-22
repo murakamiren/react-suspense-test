@@ -20,16 +20,9 @@ const UserList: FC = () => {
 		}
 	};
 
-	const { data: userData } = useSWR<userType[]>(`${import.meta.env.VITE_DATA_URL}/user/${searchWord}`, fetcher, {
+	const { data: userData, error } = useSWR<userType[]>(`${import.meta.env.VITE_DATA_URL}/user/${searchWord}`, fetcher, {
 		suspense: true,
 	});
-
-	// useEffect(() => {
-	// 	axios.get(`${import.meta.env.VITE_DATA_URL}/user/${searchWord}`).then((d) => {
-	// 		const res = d.data;
-	// 		console.log(res);
-	// 	});
-	// }, [searchWord]);
 
 	return (
 		<UnorderedList>
